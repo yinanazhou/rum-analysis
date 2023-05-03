@@ -10,5 +10,5 @@ This project collects and analyses the rum data provided in [the rum ratings web
 - Rum ratings dataset
 - Python
 - [Project](https://github.com/mrpantherson/rum_scrape) for reference
-- Bar Le Mal Necessaire and Cold Room for inspiration 
+- Bar Le Mal Necessaire and The Coldroom for inspiration 
 

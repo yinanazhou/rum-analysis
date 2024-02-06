@@ -2,3 +2,4 @@
 .venv
 .ipynb_checkpoints/
 /data/dataset/
+/**/__pycache__/

@@ -49,14 +49,9 @@ app.layout = html.Div(
         #### Main Page
         html.Div(
             [
-                html.Br(),
-                html.P(
-                    "Rum Ratings Dashboard Demo 🥂",
-                    className="text-dark text-center fw-bold fs-1",
-                ),
                 dash.page_container,
             ],
-            className="col-6 mx-auto",
+            className="col-8 mx-auto",
         ),
     ],
     style={"height": "100vh", "background-color": "#e3f2fd"},

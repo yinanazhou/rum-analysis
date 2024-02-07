@@ -8,6 +8,16 @@ layout = html.Div(
     children=[
         html.Div(
             children=[
+                html.Br(),
+                html.P(
+                    "Rum Ratings Dashboard Demo 🥂",
+                    className="text-dark text-center fw-bold fs-1",
+                ),
+            ],
+            className="col-8 mx-auto",
+        ),
+        html.Div(
+            children=[
                 html.H2("Rum Dataset Overview"),
                 "This dataset contains the rum information available at rumRatings.com, and the price information for the rum products available in Quebec from saq.ca.",
                 html.Br(),
@@ -37,5 +47,4 @@ layout = html.Div(
         ),
     ],
     className="p-4 m-2",
-    # style={"background-color": "#e3f2fd"},
 )

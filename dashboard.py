@@ -17,6 +17,12 @@ pages_links = [
     for page in dash.page_registry.values()
     if not page["name"] == "index"  # skip index page as it is linked to brand
 ]
+github_link = dcc.Link(
+    html.I(className="bi bi-github"),
+    href="https://github.com/yinanazhou/rum-analysis",
+    className="nav-item",
+    style={"color": "white", "font-size": "25px"},
+)
 
 app.layout = html.Div(
     [
@@ -31,7 +37,8 @@ app.layout = html.Div(
                             ]
                             + pages_links,
                             className="navbar-nav",
-                        )
+                        ),
+                        github_link,
                     ],
                     className="container-fluid",
                 ),

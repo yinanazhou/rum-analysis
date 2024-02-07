@@ -1,7 +1,7 @@
 import dash
 from dash import html
 
-dash.register_page(__name__, path="/", name="index", order=0)
+dash.register_page(__name__, path="/", name="index", title="Rum Demo", order=0)
 
 ####################### PAGE LAYOUT #############################
 layout = html.Div(

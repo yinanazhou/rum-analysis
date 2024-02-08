@@ -14,6 +14,7 @@ columnDict = {
     "Score": "Score",
     "Unit Price (CAD)": "Price_unit",
     "Type": "Rum Type",
+    "Alcohol By Volumn": "ABV",
 }
 
 
@@ -41,6 +42,10 @@ def create_scatter_chart(x_axis, y_axis):
     )
     fig.update_traces(marker={"size": 5, "opacity": 0.85})
     fig.update_layout(margin_autoexpand=True)
+    if columnDict[x_axis] == "ABV":
+        fig.update_layout(xaxis=dict(tickformat=".0%"))
+    elif columnDict[y_axis] == "ABV":
+        fig.update_layout(yaxis=dict(tickformat=".0%"))
     return fig
 
 

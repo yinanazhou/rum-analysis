@@ -51,7 +51,7 @@ app.layout = html.Div(
             [
                 dash.page_container,
             ],
-            className="col-8 mx-auto",
+            className="mx-auto",
         ),
     ],
     style={"height": "100vh", "background-color": "#e3f2fd"},

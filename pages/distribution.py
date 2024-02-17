@@ -75,16 +75,16 @@ def create_distribution(feat_column, col, qc_col):
         group_labels=["Worldwide", "Quebec"],
         show_hist=False,
     )
-    # fig.update_traces(opacity=0.75)
     margin_x = 80
     margin_y = 40
     fig.update_layout(
         margin={
-            "b": margin_y,
+            "b": margin_y + 20,
             "l": margin_x,
             "t": margin_y,
             "r": margin_x,
-        }
+        },
+        xaxis_title=feat_column,
     )
     if columnDict[feat_column] == "ABV":
         fig.update_layout(xaxis=dict(tickformat=".0%"))

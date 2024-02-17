@@ -62,7 +62,7 @@ def create_piecharts(ww, qc):
         legend_title_text="Rum Type",
         legend_traceorder="normal",
         margin_b=0,
-        margin_l=0,
+        margin_l=20,
     )
     return fig
 
@@ -105,7 +105,7 @@ feat_dropdown = dcc.Dropdown(
     options=list(columnDict.keys()),
     value="Popularity",
     clearable=False,
-    className="p-2",
+    className="pb-2",
 )
 
 feat_dropdown_container = html.Div(children=[feat_dropdown], className="col-3")
@@ -119,7 +119,7 @@ type_checklist = [
                 "color": colors[i],
             },
             id={"type": "label-" + rum_type_options[i]},
-            className="px-2 me-2 checklist-label",
+            className="p-1 me-3 checklist-label",
         ),
         "value": rum_type_options[i],
     }
@@ -131,7 +131,7 @@ type_option = dcc.Checklist(
     value=rum_type_options,
     labelStyle={"display": "inline-flex"},
     inline=True,
-    className="justify-content-center d-flex py-2 ps-4",
+    className="justify-content-center d-flex ps-2 mb-2",
     style={
         "backgroundColor": "white",
         "borderRadius": "10px",
@@ -145,7 +145,7 @@ filter_row = html.Div(
     id="checklist-row",
 )
 filter_container = html.Div(children=[filter_row], className="container my-auto")
-filter_panel = html.Div(children=[filter_container], className="col-6 my-auto")
+filter_panel = html.Div(children=[filter_container], className="col-8 my-auto")
 
 widget_row = html.Div(
     children=[
@@ -159,24 +159,21 @@ widget = html.Div(
     children=[widget_row],
     className="container mx-auto",
 )
-
-####################### PLOT LAYOUT #############################
+####################### LEFT LAYOUT #############################
 
 pie_plot = dcc.Graph(
     figure=create_piecharts(df["Type"], qc_df["Type"]), className="col-3 px-2", id="pie"
 )
 
-dist_plot = dcc.Graph(id="distogram", className="col-9", style={"height": "70vh"})
+####################### RIGHT LAYOUT #############################
 
-plot_row = html.Div(
-    children=[
-        pie_plot,
-        dist_plot,
-    ],
-    className="row justify-content-between",
+
+dist_plot = dcc.Graph(id="distogram", style={"height": "70vh"})
+
+right_pane = html.Div(
+    children=[widget_row, dist_plot],
+    className="col-9 mx-auto",
 )
-
-plot_container = html.Div(children=[plot_row], className="container mx-auto")
 
 ####################### PAGE LAYOUT #############################
 title = html.Div(
@@ -189,12 +186,20 @@ title = html.Div(
     className="mx-auto",
 )
 
+main_row = html.Div(
+    children=[pie_plot, right_pane],
+    className="row mx-auto",
+)
+
+main_container = html.Div(
+    children=[main_row],
+    className="container mx-auto",
+)
+
 mainPanel = html.Div(
     children=[
         html.Br(),
-        widget,
-        html.Br(),
-        plot_container,
+        main_container,
     ],
     className="col-12 mx-auto",
 )

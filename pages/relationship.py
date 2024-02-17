@@ -22,7 +22,7 @@ rum_type_options = sorted(list(df["Type"].unique()))
 x_axis = dcc.Dropdown(
     id="x_axis",
     options=list(columnDict.keys()),
-    value="Unit Price (CAD)",
+    value="Alcohol By Volumn",
     clearable=False,
 )
 y_axis = dcc.Dropdown(

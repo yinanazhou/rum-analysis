@@ -21,7 +21,7 @@ github_link = dcc.Link(
     html.I(className="bi bi-github"),
     href="https://github.com/yinanazhou/rum-analysis",
     className="nav-item",
-    style={"color": "white", "font-size": "25px"},
+    style={"color": "white", "fontSize": "25px"},
 )
 
 app.layout = html.Div(
@@ -54,7 +54,7 @@ app.layout = html.Div(
             className="mx-auto",
         ),
     ],
-    style={"height": "100vh", "background-color": "#e3f2fd"},
+    style={"height": "100vh", "backgroundColor": "#e3f2fd"},
 )
 
 if __name__ == "__main__":

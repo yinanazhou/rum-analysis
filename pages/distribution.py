@@ -131,7 +131,7 @@ type_option = dcc.Checklist(
     value=rum_type_options,
     labelStyle={"display": "inline-flex"},
     inline=True,
-    className="justify-content-center d-flex py-2",
+    className="justify-content-center d-flex py-2 ps-4",
     style={
         "backgroundColor": "white",
         "borderRadius": "10px",
@@ -145,7 +145,7 @@ filter_row = html.Div(
     id="checklist-row",
 )
 filter_container = html.Div(children=[filter_row], className="container my-auto")
-filter_panel = html.Div(children=[filter_container], className="col-8 my-auto")
+filter_panel = html.Div(children=[filter_container], className="col-6 my-auto")
 
 widget_row = html.Div(
     children=[

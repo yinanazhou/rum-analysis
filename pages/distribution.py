@@ -27,6 +27,7 @@ def create_piecharts(ww, qc):
     fig = make_subplots(
         rows=2,
         cols=1,
+        vertical_spacing=0.08,
         specs=[[{"type": "domain"}], [{"type": "domain"}]],
     )
 
@@ -55,14 +56,23 @@ def create_piecharts(ww, qc):
     fig.update_layout(
         title_text="Distribution of Rum Products by Type",
         title_font_size=14,
+        title_y=0.95,
         annotations=[
-            dict(text="Worldwide", x=0.5, y=0.18, showarrow=False),
-            dict(text="Quebec", x=0.5, y=0.82, showarrow=False),
+            dict(text="Worldwide", x=0.5, y=0.2, showarrow=False),
+            dict(text="Quebec", x=0.5, y=0.8, showarrow=False),
         ],
-        legend_title_text="Rum Type",
-        legend_traceorder="normal",
+        legend_orientation="h",
+        legend_y=0,
+        # legend_x=0,
+        # legend_xref="container",
+        legend_yref="container",
+        legend_itemwidth=30,
+        # legend_entrywidth=40,
+        # legend_entrywidthode
+        margin_t=60,
         margin_b=0,
-        margin_l=20,
+        margin_l=0,
+        margin_r=0,
     )
     return fig
 

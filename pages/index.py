@@ -8,10 +8,29 @@ layout = html.Div(
     children=[
         html.Div(
             children=[
-                html.H2("Rum Dataset Overview"),
-                "This dataset contains the rum information available at rumRatings.com, and the price information for the rum products available in Quebec from saq.ca.",
                 html.Br(),
-            ]
+                html.P(
+                    "Rum Ratings Dashboard Demo",
+                    className="text-dark text-center fw-bold fs-1",
+                ),
+                html.P(
+                    "🥂",
+                    className="text-dark text-center fw-bold fs-1",
+                ),
+            ],
+            className="col-6 mx-auto",
+        ),
+        html.Div(
+            children=[
+                html.H2("Rum Dataset Overview"),
+                "This dataset contains the rum information available at ",
+                html.A("rumRatings.com", href="https://www.rumratings.com"),
+                " and the price information for the rum products available in Quebec from ",
+                html.A("saq.ca", href="https://www.saq.com/"),
+                ".",
+                html.Br(),
+            ],
+            className="col-6 mx-auto",
         ),
         html.Div(
             children=[
@@ -33,9 +52,9 @@ layout = html.Div(
                 html.B("- Number of Ratings"),
                 html.Br(),
                 html.B("- Popularity"),
-            ]
+            ],
+            className="col-6 mx-auto",
         ),
     ],
     className="p-4 m-2",
-    # style={"background-color": "#e3f2fd"},
 )

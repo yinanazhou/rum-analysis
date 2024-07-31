@@ -23,7 +23,11 @@ layout = html.Div(
         html.Div(
             children=[
                 html.H2("Rum Dataset Overview"),
-                "This dataset contains the rum information available at rumRatings.com, and the price information for the rum products available in Quebec from saq.ca.",
+                "This dataset contains the rum information available at ",
+                html.A("rumRatings.com", href="https://www.rumratings.com"),
+                " and the price information for the rum products available in Quebec from ",
+                html.A("saq.ca", href="https://www.saq.com/"),
+                ".",
                 html.Br(),
             ],
             className="col-6 mx-auto",

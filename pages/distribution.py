@@ -58,8 +58,8 @@ def create_piecharts(ww, qc):
         title_font_size=14,
         title_y=0.95,
         annotations=[
-            dict(text="Worldwide", x=0.5, y=0.2, showarrow=False),
-            dict(text="Quebec", x=0.5, y=0.8, showarrow=False),
+            dict(text="Worldwide", x=0.5, y=0.8, showarrow=False),
+            dict(text="Quebec", x=0.5, y=0.2, showarrow=False),
         ],
         legend_orientation="h",
         legend_y=0,

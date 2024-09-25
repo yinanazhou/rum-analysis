@@ -45,8 +45,8 @@ def create_count_plot(types, count, count_qc):
         layout=dict(
             barcornerradius=15,
             yaxis=dict(type="log"),
-            xaxis_title="Type", 
-            yaxis_title="Count"
+            xaxis_title="Type",
+            yaxis_title="Count",
         ),
     )
     return fig
@@ -58,11 +58,7 @@ def create_pop_plot(types, pop, pop_qc):
             go.Bar(x=types, y=pop, name="Worldwide", text=pop),
             go.Bar(x=types, y=pop_qc, name="Quebec", text=pop_qc),
         ],
-        layout=dict(
-            barcornerradius=15,
-            xaxis_title="Type", 
-            yaxis_title="Popularity"
-        ),
+        layout=dict(barcornerradius=15, xaxis_title="Type", yaxis_title="Popularity"),
     )
     return fig
 
@@ -95,7 +91,7 @@ pop_plot = dcc.Graph(
 title = html.Div(
     children=[
         html.Br(),
-        html.H2("Explore Top Rum Brands", className="fw-bold text-center"),
+        html.H2("Explore Top Rum Products", className="fw-bold text-center"),
     ],
     className="mx-auto",
 )
